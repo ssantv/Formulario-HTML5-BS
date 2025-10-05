@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a0af80927a.js" crossorigin="anonymous"></script>
+    <title>Formulario Pago HTML5</title>
+</head>
+
+<body>
+    <div class="container border m-5">
+        <form class="needs-validation" novalidate>
+            <div class="row border bg-light mb-4">
+                <h1>Ejemplo de formulario de pago</h1>
+            </div>
+            <div class="container">
+                <div id="generalAlert" class="alert alert-danger d-none" role="alert">
+                    El formulario no es correcto. Por favor, revisa los campos señalados.
+                </div>
+                <div class="row mb-3">
+                    <div class="col-5">
+                        <label for="cNumber" class="form-label"> Número de tarjeta </label>
+                        <input type="text" class="form-control" pattern="[0-9]{16}" id="cNumber"
+                            placeholder="XXXXXXXXXXXXXXXX" required>
+                        <div class="invalid-feedback">Introduce los 16 números de tu tarjeta</div>
+                    </div>
+                    <div class="col-3">
+                        <label for="cvcNumber" class="form-label">CVC</label>
+                        <input type="text" class="form-control" pattern="[0-9]{3}" id="cvcNumber" placeholder="XXX"
+                            required>
+                        <div class="invalid-feedback">Introduce los 3 números de CVC</div>
+                    </div>
+                    <div class="col-4">
+                        <label for="money" class="form-label">Cantidad</label>
+                        <input type="number" class="form-control" id="money" placeholder="Cantidad" required>
+                        <div class="invalid-feedback">Introduce una cantidad correcta</div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="fName" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="fName" required>
+                        <div class="invalid-feedback">Introduce tu nombre</div>
+                    </div>
+                    <div class="col-6">
+                        <label for="lName" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="lName" required>
+                        <div class="invalid-feedback">Introduce tu apellido</div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="city" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="city" required>
+                        <div class="invalid-feedback">Introduce el nombre de la ciudad</div>
+                    </div>
+                    <div class="col-3">
+                        <label for="province" class="form-label">Provincia</label>
+                        <select class="form-select" id="province" required>
+                            <option value="0" selected disabled>Elige una provincia</option>
+                            <option value="1">Álava</option>
+                            <option value="2">Albacete</option>
+                            <option value="3">Alicante</option>
+                            <option value="4">Almería</option>
+                            <option value="5">Asturias</option>
+                            <option value="6">Ávila</option>
+                            <option value="7">Badajoz</option>
+                            <option value="8">Barcelona</option>
+                            <option value="9">Burgos</option>
+                            <option value="10">Cáceres</option>
+                            <option value="11">Cádiz</option>
+                            <option value="12">Cantabria</option>
+                            <option value="13">Castellón</option>
+                            <option value="14">Ciudad Real</option>
+                            <option value="15">Córdoba</option>
+                            <option value="16">Cuenca</option>
+                            <option value="17">Girona</option>
+                            <option value="18">Granada</option>
+                            <option value="19">Guadalajara</option>
+                            <option value="20">Gipuzkoa</option>
+                            <option value="21">Huelva</option>
+                            <option value="22">Huesca</option>
+                            <option value="23">Illes Balears</option>
+                            <option value="24">Jaén</option>
+                            <option value="25">La Coruña</option>
+                            <option value="26">La Rioja</option>
+                            <option value="27">Las Palmas</option>
+                            <option value="28">León</option>
+                            <option value="29">Lleida</option>
+                            <option value="30">Lugo</option>
+                            <option value="31">Madrid</option>
+                            <option value="32">Málaga</option>
+                            <option value="33">Murcia</option>
+                            <option value="34">Navarra</option>
+                            <option value="35">Ourense</option>
+                            <option value="36">Palencia</option>
+                            <option value="37">Pontevedra</option>
+                            <option value="38">Salamanca</option>
+                            <option value="39">Santa Cruz de Tenerife</option>
+                            <option value="40">Segovia</option>
+                            <option value="41">Sevilla</option>
+                            <option value="42">Soria</option>
+                            <option value="43">Tarragona</option>
+                            <option value="44">Teruel</option>
+                            <option value="45">Toledo</option>
+                            <option value="46">Valencia</option>
+                            <option value="47">Valladolid</option>
+                            <option value="48">Vizcaya</option>
+                            <option value="49">Zamora</option>
+                            <option value="50">Zaragoza</option>
+                        </select>
+                        <div class="invalid-feedback">Selecciona una provincia</div>
+                    </div>
+                    <div class="col-3">
+                        <label for="cp" class="form-label">Código postal</label>
+                        <input type="text" class="form-control" id="cp" pattern="[0-9]{5}" required>
+                        <div class="invalid-feedback">Introduce un código postal válido</div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <h5>Aceptamos:</h5>
+                        <div id="payment" class="form-check form-check-inline mt-3 bg-secondary justify-content-start"
+                            required>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline"> <input class="form-check-input" type="radio"
+                                    name="inlineRadioOptions" id="inlineRadio2" value="option2"> <label
+                                    class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-mastercard"
+                                        style="color: #ffffff;"></i></label> </div>
+                            <div class="form-check form-check-inline"> <input class="form-check-input" type="radio"
+                                    name="inlineRadioOptions" id="inlineRadio3" value="option3"> <label
+                                    class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-stripe"
+                                        style="color: #ffffff;"></i></label> </div>
+                            <div class="form-check form-check-inline"> <input class="form-check-input" type="radio"
+                                    name="inlineRadioOptions" id="inlineRadio3" value="option4"> <label
+                                    class="form-check-label" for="inlineRadio4"><i
+                                        class="fa-solid fa-money-check-dollar" style="color: #ffffff;"></i></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                        <div id="notes" class="form-text">Añade tus notas aquí.</div>
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-12 d-flex justify-content-end">
+                        <button type="reset" class="btn btn-secondary me-2" id="reset">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="submit">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        (() => {
+            'use strict'
+            const form = document.querySelector('.needs-validation');
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    document.getElementById('generalAlert').classList.remove('d-none');
+                } else {
+                    document.getElementById('generalAlert').classList.add('d-none');
+                }
+                form.classList.add('was-validated');
+            }, false)
+        })();
+    </script>
+</body>
+</html>
